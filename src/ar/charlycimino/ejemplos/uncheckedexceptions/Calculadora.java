@@ -12,7 +12,8 @@ public class Calculadora {
         if (num < 0) {
             throw new RuntimeException("No se puede calcular el factorial de un número negativo");
         }
-        if (num > 12) {
+        final int maxVal = 12;
+        if (num > maxVal) {
             throw new RuntimeException("Por limitaciones técnicas, no se puede calcular el factorial de un entero mayor que 12");
         }
         int fact = 1;

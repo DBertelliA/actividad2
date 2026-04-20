@@ -14,12 +14,9 @@ public class Persona {
         setEdad(edad);
     }
 
-    private void setEdad(int edad) /* throws IllegalArgumentException */ {
-        try {
-            Verificador.checkEsNegativo(edad);
+    private void setEdad(int edad) {
+            if(edad < 0){edad = 0;}
             this.edad = edad;
-        } catch (RuntimeException ex) {
-            throw new IllegalArgumentException("La edad debe ser positiva", ex);
-        }        
+
     }
 }

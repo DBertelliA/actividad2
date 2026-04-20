@@ -12,8 +12,10 @@ public class Calculadora {
         if (num < 0) {
             throw new ArithmeticException("No se puede calcular el factorial de un número negativo");
         }
-        if (num > 12) {
-            throw new IntegerOverflowException("Por limitaciones técnicas, no se puede calcular el factorial de un entero mayor que 12");
+        final int MAX_FACTORIAL = 12;
+
+        if (num > MAX_FACTORIAL) {
+            throw new IntegerOverflowException("Por limitaciones técnicas, no se puede calcular el factorial");
         }
         int fact = 1;
         for (int i = 2; i <= num; i++) {
